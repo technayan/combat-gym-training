@@ -1,0 +1,38 @@
+[
+    {
+      "id": 101,
+      "name": "Power Yoga",
+      "img": "https://i.ibb.co/bzKC1mx/power-yoga.png",
+      "details": "Power Yoga is a fast-paced style of yoga that's focused on building strength and endurance. Learn the effective position from me."
+    },
+    {
+      "id": 102,
+      "name": "Power Lifting",
+      "img": "https://i.ibb.co/hcWZDgd/weight-lifting.png",
+      "details": "Powerlifting is a strength sport that consists of three attempts at maximal weight on three lifts. I am providing pro tips ank tricks on weight lifting."
+    },
+    {
+      "id": 103,
+      "name": "Body Building",
+      "img": "https://i.ibb.co/T1Mm3Sn/body-building.png",
+      "details": "Bodybuilding is building muscle with heavy exercise and regular strict diet. Try my best instruction"
+    },
+    {
+      "id": 104,
+      "name": "Cardio Exercise",
+      "img": "https://i.ibb.co/T1Mm3Sn/body-building.png",
+      "details": "Regular cardio workouts can: Strengthen your heart and blood vessels. Learn cardio exercise from me."
+    },
+    {
+      "id": 105,
+      "name": "Fitness Class",
+      "img": "https://i.ibb.co/mv4hJmp/fitness.png",
+      "details": "Fit body brings fresh brain and mind. To stay a person should exercise regularly. I provide best fitness instructions."
+    },
+    {
+      "id": 106,
+      "name": "Weight Loss",
+      "img": "https://i.ibb.co/BGkk89D/weight-loss.png",
+      "details": "Belly fat is now a common problem for every food lover. I am providing best diet routine and instructions."  
+    }
+  ]

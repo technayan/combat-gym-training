@@ -1,0 +1,21 @@
+.services-section {
+    padding: 80px 0;
+}
+
+.services-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+}
+
+.services-section-title {
+    color: #ff3622;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+@media (max-width:576px) {
+    .services-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
