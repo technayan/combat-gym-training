@@ -15,6 +15,10 @@
 }
 
 @media (max-width:576px) {
+    .services-section {
+        padding: 40px 0;
+    }
+
     .services-wrapper {
         grid-template-columns: 1fr;
     }
