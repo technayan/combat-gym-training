@@ -15,9 +15,9 @@ const Services = () => {
       .then((data) => setServices(data))
   })
   return (
-    <section className="services-section">
+    <section>
       <Container>
-        <h2 className="services-section-title text-center">Services</h2>
+        <h2 className="section-title text-center">Services</h2>
         <div className="services-wrapper py-5">
           {services.map((service) => (
             <Service key={service.id} service={service}></Service>
