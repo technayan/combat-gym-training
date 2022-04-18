@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Checkout from './components/Checkout/Checkout';
 import NotFound from './components/NotFound/NotFound';
+import SignIn from './components/SignIn/SignIn';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />
         <Route path='/checkout/:id' element={<Checkout />} />
+        <Route path='/signin' element={<SignIn />} />
 
         <Route path='*' element={<NotFound />} />
       </Routes>

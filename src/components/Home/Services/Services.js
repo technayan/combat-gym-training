@@ -15,7 +15,7 @@ const Services = () => {
       .then((data) => setServices(data))
   })
   return (
-    <section>
+    <section id='services'>
       <Container>
         <h2 className="section-title text-center">Services</h2>
         <div className="services-wrapper py-5">

@@ -1,0 +1,41 @@
+.form-container {
+    height: 100vh;
+}
+
+.form {
+    border: 1px solid lightgray;
+    width: 25%;
+}
+
+.form-title {
+    color: #ff776b;
+    font-weight: 700;
+}
+
+.form-link {
+    color: #ff776b;
+}
+
+.form-link:hover {
+    color: #ff3622;
+}
+
+.submit-btn,
+.submit-btn:focus {
+    background: #ff776b;
+    border: none;
+    padding: 10px 0;
+    box-shadow: none;
+}
+
+.submit-btn:hover {
+    background: #ff3622;
+}
+
+
+/* Responsive CSS for Mobile Device */
+@media (max-width: 576px) {
+    .form {
+        width: 90%;
+    }
+}
