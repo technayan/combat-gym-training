@@ -8,6 +8,11 @@
     padding: 10px 0;
 }
 
+.service-price {
+    font-weight: 700;
+    color: #ff776b;
+}
+
 .service-btn {
     padding: 10px 0;
     background: #ff776b;
@@ -19,3 +24,4 @@
 .service-btn:hover {
     background: #ff3622;
 }
+
