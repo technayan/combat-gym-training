@@ -1,6 +1,7 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { Button, Form } from 'react-bootstrap'
 import {
+  useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
   useSignInWithGoogle,
 } from 'react-firebase-hooks/auth'
@@ -19,6 +20,15 @@ const SignIn = () => {
 
   const [signInWithGoogle, user1] = useSignInWithGoogle(auth);
 
+  const [sendPasswordResetEmail, error2] = useSendPasswordResetEmail(
+    auth
+  );
+
+  const handleForgotPassword = async () => {
+    let email = emailRef.current.value;
+    await sendPasswordResetEmail(email);
+  }
+
   const [
     signInWithEmailAndPassword,
     user,
@@ -26,9 +36,9 @@ const SignIn = () => {
   ] = useSignInWithEmailAndPassword(auth);
 
   const handleSignIn = (e) => {
-    e.preventDefault()
-    const email = emailRef.current.value
-    const password = passwordRef.current.value
+    e.preventDefault();
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
     signInWithEmailAndPassword(email, password)
   };
 
@@ -59,22 +69,25 @@ const SignIn = () => {
             />
           </Form.Group>
           <p className="text-danger">{error?.message}</p>
-          <p className="py-2">
+          
+          <Button className="w-100 submit-btn" variant="primary" type="submit">
+            Sign In
+          </Button>
+          
+          <p onClick={handleForgotPassword} style={{color:'#ff776b', margin: '10px 0 10px', cursor:'pointer'}}>Forgot Password?</p>
+          <p className="my-1">
             New to Combat?{' '}
             <Link className="form-link" to={'/signup'}>
               Creat an account
             </Link>
           </p>
-          <Button className="w-100 submit-btn" variant="primary" type="submit">
-            Sign In
-          </Button>
         </Form>
         <p className="divider position-relative text-center my-3">OR</p>
         <button
           className="google-signin-btn mx-auto py-2 w-100 d-flex justify-content-center"
           onClick={() => signInWithGoogle()}
         >
-          <i class="ri-google-fill me-2"></i>SignIn with Google
+          <i className="ri-google-fill me-2"></i>SignIn with Google
         </button>
       </div>
     </div>

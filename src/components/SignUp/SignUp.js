@@ -23,7 +23,7 @@ const SignUp = () => {
     createUserWithEmailAndPassword,
     user,
     error,
-  ] = useCreateUserWithEmailAndPassword(auth)
+  ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
 
   const [signInWithGoogle, user1] = useSignInWithGoogle(auth)
 
@@ -97,12 +97,7 @@ const SignUp = () => {
             />
           </Form.Group>
 
-          <p className="py-2">
-            Already have an account?{' '}
-            <Link className="form-link" to={'/signin'}>
-              Sign In
-            </Link>
-          </p>
+          
           <Button
             className={`w-100 submit-btn ${!check && 'disabled'} `}
             variant="primary"
@@ -110,13 +105,20 @@ const SignUp = () => {
           >
             Sign Up
           </Button>
+
+          <p className="my-3">
+            Already have an account?{' '}
+            <Link className="form-link" to={'/signin'}>
+              Sign In
+            </Link>
+          </p>
         </Form>
         <p className="divider position-relative text-center my-3">OR</p>
         <button
           className="google-signin-btn mx-auto py-2 w-100 d-flex justify-content-center"
           onClick={() => signInWithGoogle()}
         >
-          <i class="ri-google-fill me-2"></i>SignIn with Google
+          <i className="ri-google-fill me-2"></i>SignIn with Google
         </button>
       </div>
     </div>

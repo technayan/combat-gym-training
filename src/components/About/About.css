@@ -1,0 +1,28 @@
+.about-section {
+    min-height: 100vh;
+}
+
+.profile-img {
+    width: 300px;
+    border-radius: 50%;
+    border: 10px solid #ff776b
+}
+
+.name {
+    color: #ff776b;
+    font-weight: 700;
+}
+
+.about-title {
+    color: #ff776b;
+}
+
+.about-text {
+    font-size: 20px;
+}
+
+@media (max-width: 576px) {
+    .profile-img{
+        width: 200px;
+    }
+}
