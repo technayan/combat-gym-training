@@ -7,7 +7,7 @@ import './Services.css'
 
 const Services = () => {
   // Declaring States
-  const [services, setServices] = useState([])
+  const [services, setServices] = useState([]);
 
   useEffect(() => {
     fetch('services.json')

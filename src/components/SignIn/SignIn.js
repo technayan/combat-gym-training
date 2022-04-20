@@ -16,11 +16,13 @@ const SignIn = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+
+
   let from = location.state?.from?.pathname || '/';
 
   const [signInWithGoogle, user1] = useSignInWithGoogle(auth);
 
-  const [sendPasswordResetEmail, error2] = useSendPasswordResetEmail(
+  const [sendPasswordResetEmail] = useSendPasswordResetEmail(
     auth
   );
 
@@ -39,12 +41,14 @@ const SignIn = () => {
     e.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-    signInWithEmailAndPassword(email, password)
+    signInWithEmailAndPassword(email, password);
   };
 
   if (user || user1) {
     navigate(from, { replace: true });
   }
+
+ 
 
   return (
     <div className="form-container">
@@ -68,7 +72,7 @@ const SignIn = () => {
               required
             />
           </Form.Group>
-          <p className="text-danger">{error?.message}</p>
+          <p className="text-danger">{error?.essage}</p>
           
           <Button className="w-100 submit-btn" variant="primary" type="submit">
             Sign In
@@ -94,4 +98,4 @@ const SignIn = () => {
   )
 }
 
-export default SignIn
+export default SignIn;
