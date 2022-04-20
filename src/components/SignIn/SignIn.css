@@ -1,10 +1,14 @@
 .form-container {
-    height: 100vh;
+    min-height: 100vh;
+    padding: 150px 0;
+}
+
+.form-wrapper {
+    width: 25%;
 }
 
 .form {
     border: 1px solid lightgray;
-    width: 25%;
 }
 
 .form-title {
@@ -28,8 +32,44 @@
     box-shadow: none;
 }
 
+.disabled{
+    background-color: lightgray !important;
+    color: #000 !important;
+}
+
 .submit-btn:hover {
     background: #ff3622;
+}
+
+.divider::before {
+    position: absolute;
+    content: '';
+    background: #000;
+    height: 1px;
+    width: 50px;
+    top: 50%;
+    right: 100px;
+}
+.divider::after {
+    position: absolute;
+    content: '';
+    background: #000;
+    height: 1px;
+    width: 50px;
+    top: 50%;
+    left: 100px;
+}
+
+.google-signin-btn {
+    background: none;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.google-signin-btn:hover {
+    background: #ff776b;
+    color: #fff;
 }
 
 
