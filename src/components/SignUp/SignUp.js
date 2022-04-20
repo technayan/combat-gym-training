@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Button, Form } from 'react-bootstrap'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import {
   useCreateUserWithEmailAndPassword,
   useSignInWithGoogle,
@@ -14,19 +14,21 @@ const SignUp = () => {
   const [check, setCheck] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  let from = location.state?.from?.pathname || '/';
 
   const [
     createUserWithEmailAndPassword,
     user,
-    loading,
     error,
   ] = useCreateUserWithEmailAndPassword(auth)
 
   const [signInWithGoogle, user1] = useSignInWithGoogle(auth)
 
   if (user || user1) {
-    navigate('/')
+    navigate(from, { replace: true });
   }
 
   const handleSignUp = (e) => {

@@ -9,32 +9,31 @@ import auth from '../../firebase.init'
 import './SignIn.css'
 
 const SignIn = () => {
-  const emailRef = useRef('')
-  const passwordRef = useRef('')
+  const emailRef = useRef('');
+  const passwordRef = useRef('');
 
-  const navigate = useNavigate()
-  const location = useLocation()
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  let from = location.state?.from?.pathname || '/'
+  let from = location.state?.from?.pathname || '/';
 
-  const [signInWithGoogle, user1] = useSignInWithGoogle(auth)
+  const [signInWithGoogle, user1] = useSignInWithGoogle(auth);
 
   const [
     signInWithEmailAndPassword,
     user,
-    loading,
     error,
-  ] = useSignInWithEmailAndPassword(auth)
+  ] = useSignInWithEmailAndPassword(auth);
 
   const handleSignIn = (e) => {
     e.preventDefault()
     const email = emailRef.current.value
     const password = passwordRef.current.value
     signInWithEmailAndPassword(email, password)
-  }
+  };
 
   if (user || user1) {
-    navigate(from, { replace: true })
+    navigate(from, { replace: true });
   }
 
   return (

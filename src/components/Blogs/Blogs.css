@@ -1,0 +1,18 @@
+.blog-section {
+    margin: 100px 0;
+}
+
+.blog {
+    padding: 20px;
+    border: 1px solid lightgray;
+    margin: 40px 0;
+    border-radius: 5px;
+}
+
+.blog h3 {
+    color: #ff776b;
+}
+
+.blog p {
+    font-size: 20px;
+}

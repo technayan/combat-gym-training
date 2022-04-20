@@ -75,7 +75,7 @@
 
 /* Responsive CSS for Mobile Device */
 @media (max-width: 576px) {
-    .form {
+    .form-wrapper {
         width: 90%;
     }
 }
